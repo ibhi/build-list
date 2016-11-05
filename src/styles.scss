@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Common styles for the cards */
+.card-border-green {
+  border: 4px solid #548039;
+}
+
+.card-border-red {
+  border: 4px solid #be0712;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  /* border: 4px solid #61953f; */
+  padding: 10px;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  transition: box-shadow 200ms ease;
+  &:hover {
+    box-shadow: none;
+  }
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #61953f;
+  }
+  .arrow-container-left {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+  }
+  .arrow-container-right {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+  .arrow-green {
+    background-color: #548039;
+  }
+  .arrow-red {
+    background-color: #be0712;
+  }
+  .up-arrow-green {
+    position: relative;
+    .up {
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 50px solid #548039;
+    }
+    .rect {
+      position: absolute;
+      top: 50px;
+      left: 10px;
+      width: 40px;
+      height: 50px;
+      background-color: #548039;
+    }
+    .number {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      color: white;
+      font-size: 20px;
+    }
+  }
+  
+  .up-arrow-red {
+    @extend .up-arrow-green;
+    .up {
+      border-bottom: 50px solid #be0712;
+    }
+    .rect {
+      background-color: #be0712;
+    }
+  }
+  .arrow-label {
+    position: absolute;
+    top: 100px;
+    left: 25%;
+  }
+  .right-arrow-green {
+    @extend .up-arrow-green;
+    transform: rotate(90deg);
+  }
+}

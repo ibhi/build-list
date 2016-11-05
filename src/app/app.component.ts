@@ -31,6 +31,13 @@ export class AppComponent implements OnInit {
     width: 500
   };
 
+  metricsData = {
+    test: 70,
+    maintainability: 49,
+    security: 64,
+    workmanship: 72
+  };
+
   ngOnInit() {
     setTimeout(() => {
       this.data = {progress: 80, state: 'running'};

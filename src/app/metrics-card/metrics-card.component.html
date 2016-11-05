@@ -1,0 +1,22 @@
+<div class="card card-border-green">
+  <div class="title">Metrics</div>
+  <div class="arrow-container-left">
+    <div [ngClass] = "{ 'up-arrow-green' : data.test > 75, 'up-arrow-red': data.test < 75 }">
+      <div class="up"></div>
+      <div class="rect"></div>
+      <div id = "test" class="number">{{data.test}}</div>
+    </div>
+    <div class="arrow-label">Test</div>
+  </div>
+
+  <div class="arrow-container-right">
+    <div [ngClass] = "{'up-arrow-green': data.maintainability > 50, 'up-arrow-red': data.maintainability < 50}">
+      <div class="up"></div>
+      <div class="rect"></div>
+      <div id = "maintainability" class="number">{{data.maintainability}}</div>
+    </div>
+    <div class="arrow-label">Maintainability</div>
+  </div>
+  <p id = "security" >Security: {{data.security}}</p>
+  <p id = "workmanship">Workmanship: {{data.workmanship}}</p>
+</div>

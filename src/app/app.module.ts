@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { MetricsCardComponent } from './metrics-card/metrics-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgressBarComponent,
-    PieChartComponent
+    PieChartComponent,
+    MetricsCardComponent
   ],
   imports: [
     BrowserModule,
