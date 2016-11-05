@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { PieChartComponent } from './pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,

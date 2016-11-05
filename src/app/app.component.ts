@@ -18,6 +18,18 @@ export class AppComponent implements OnInit {
       bottom: 20
     }
   };
+  pieData = [{
+    label: 'Failed No. of unit tests',
+    value: 400
+  }, {
+    label: 'Passed No. of unit tets',
+    value: 600
+  }];
+
+  pieOptions = {
+    height: 500,
+    width: 500
+  };
 
   ngOnInit() {
     setTimeout(() => {
