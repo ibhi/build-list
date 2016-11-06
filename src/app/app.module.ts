@@ -10,6 +10,7 @@ import { MetricsCardComponent } from './metrics-card/metrics-card.component';
 import { BuildCardComponent } from './build-card/build-card.component';
 import { UnitTestCardComponent } from './unit-test-card/unit-test-card.component';
 import { FuncTestCardComponent } from './func-test-card/func-test-card.component';
+import { EpochDatePipe } from './epoch-date//epoch-date.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FuncTestCardComponent } from './func-test-card/func-test-card.component
     MetricsCardComponent,
     BuildCardComponent,
     UnitTestCardComponent,
-    FuncTestCardComponent
+    FuncTestCardComponent,
+    EpochDatePipe
   ],
   imports: [
     BrowserModule,

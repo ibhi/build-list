@@ -41,6 +41,12 @@ export class AppComponent implements OnInit {
     securityScore: 64,
     workmanshipScore: 72
   };
+
+  buildData = {
+    state: 'rejected',
+    timestamp: 1460889960
+  };
+
   private finalData;
 
   constructor(private dataService: DataService) {

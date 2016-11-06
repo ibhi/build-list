@@ -1,3 +1,16 @@
-<p>
-  build-card works!
-</p>
+<div class="card card-lap" [ngClass] = "{'card-pending': data.state == 'pending', 'card-blue': data.state == 'running', 'card-red': data.state == 'rejected', 'card-green': data.state == 'accepted'}">
+  <div class="card-wrapper col-xs-12">
+    <div class="card-title">Build</div>
+    <div class="lap col-xs-6 text-center"><i class="fa fa-laptop" aria-hidden="true"></i>
+      <div class="text-center mart15">
+        Debug
+      </div>
+    </div>
+    <div class="lap col-xs-6 text-center"><i class="fa fa-laptop" aria-hidden="true"></i>
+      <div class="text-center mart15">
+        Release
+      </div>
+    </div>
+    <div class="lap-time text-center mart15 col-xs-12">{{data.timestamp | epochDate | date: 'medium'}}</div>
+  </div>
+</div>
