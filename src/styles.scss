@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Common styles for the cards */
-.card-border-green {
+/*.card-border-green {
   border: 4px solid #548039;
 }
 
@@ -13,7 +13,6 @@
   position: relative;
   height: 300px;
   width: 300px;
-  /* border: 4px solid #61953f; */
   padding: 10px;
   -webkit-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
   -moz-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
@@ -86,5 +85,317 @@
   .right-arrow-green {
     @extend .up-arrow-green;
     transform: rotate(90deg);
+  }
+}*/
+
+// Variables
+
+$green: #72ac4d;
+$orange: #fed86e;
+$red: #be0712;
+$blue: #5e9cd3;
+
+.mart15 {
+  margin-top: 15px;
+}
+
+.mar20 {
+  margin: 20px 0;
+}
+
+.mart30 {
+  margin-top: 30px;
+}
+
+.list {
+  margin-bottom: 10px;
+  border: 1px solid #999;
+}
+
+.card {
+  float: left;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  width: 20%;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-wrapper {
+  border: 2px solid $green;
+  padding: 10px;
+  height: 220px;
+  overflow: auto;
+}
+
+.up-arrow {
+  background: $green none repeat scroll 0 0;
+  color: #fff;
+  font-size: 20px;
+  height: 30px;
+  margin: 30px auto 0;
+  position: relative;
+  text-align: center;
+  width: 30px;
+  &::after {
+    border-bottom: 30px solid $green;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: "";
+    left: -15px;
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.right-arrow {
+  background: $orange none repeat scroll 0 0;
+  font-size: 20px;
+  height: 30px;
+  margin: 30px auto 0;
+  position: relative;
+  text-align: center;
+  width: 45px;
+  &::after {
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid $orange;
+    border-top: 30px solid transparent;
+    content: "";
+    position: absolute;
+    right: -30px;
+    top: -14px;
+  }
+}
+
+.down-arrow {
+  background: $green none repeat scroll 0 0;
+  color: #fff;
+  font-size: 20px;
+  height: 30px;
+  margin: 0 auto 0;
+  position: relative;
+  text-align: center;
+  width: 30px;
+  &::after {
+    border-top: 30px solid $green;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    content: "";
+    left: -15px;
+    position: absolute;
+    bottom: -30px;
+  }
+}
+
+.arrow-red {
+  background: $red;
+  color: #fff;
+}
+
+.arrow-green {
+  background: $green;
+  color: #fff;
+  &.up-arrow::after {
+    border-bottom: 30px solid $green;
+  }
+}
+
+.arrow-red.up-arrow::after {
+  border-bottom: 30px solid $red;
+}
+
+.arrow-green.down-arrow::after {
+  border-top: 30px solid $green;
+}
+
+.arrow-red.down-arrow::after {
+  border-top: 30px solid $red;
+}
+
+.card-green {
+  .card-title {
+    color: $green;
+  }
+  .card-wrapper {
+    border-color: $green;
+  }
+}
+
+.card-blue {
+  .card-title {
+    color: $blue;
+  }
+  .card-wrapper {
+    border-color: $blue;
+  }
+}
+
+.card-red {
+  .card-title {
+    color: $red;
+  }
+  .card-wrapper {
+    border-color: $red;
+  }
+}
+
+.lap {
+  color: $blue;
+  i.fa {
+    color: $blue;
+    font-size: 80px;
+  }
+}
+
+.lap-time {
+  bottom: 0;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  width: auto;
+}
+
+.card-lap .card-wrapper {
+  padding-bottom: 40px;
+}
+
+.graph-percent {
+  color: grey;
+  font-size: 24px;
+  color: grey;
+  font-size: 24px;
+  > span {
+    display: block;
+    font-size: 10px;
+  }
+}
+
+.code-cov {
+  &.text-center > span {
+    display: block;
+    font-size: 10px;
+  }
+  bottom: 5px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  width: auto;
+}
+
+.progress {
+  background-color: #f6cbae;
+  border-radius: 0;
+  height: 40px;
+  margin-bottom: 0;
+}
+
+.progress-bar {
+  background-color: #c6dfb5;
+  color: #3a5d36;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  > span {
+    display: block;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.orange-text {
+  color: $orange;
+}
+
+.red-text {
+  color: $red;
+}
+
+.btn-primary {
+  background: $blue none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 0;
+}
+
+.card-result {
+  h2 {
+    margin: 0;
+  }
+  border: none;
+}
+
+.acc-body {
+  border: 2px solid;
+  float: left;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.list-pending {
+  border-color: #ccc;
+  .acc-list {
+    color: #aaa;
+  }
+}
+
+.list-running {
+  border-color: $blue;
+  .acc-list {
+    color: $blue;
+  }
+}
+
+.list-rejected {
+  border-color: $red;
+  .acc-list {
+    color: $red;
+  }
+}
+
+.list-accepted {
+  border-color: $green;
+  .acc-list {
+    color: $green;
+  }
+}
+
+.acc-list-tem:first-child {
+  text-align: left;
+  width: 20%;
+}
+
+.acc-list {
+  margin-bottom: 15px;
+}
+
+.acc-list-tem {
+  &:nth-child(3) {
+    width: 20%;
+  }
+  float: left;
+  width: 10%;
+}
+
+@media all and (max-width: 992px) {
+  .acc-list-tem {
+    width: 25%;
+    margin-bottom: 10px;
+    &:first-child, &:nth-child(3) {
+      width: 25%;
+      margin-bottom: 10px;
+    }
+  }
+  .card {
+    width: 33.3%;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .card {
+    width: 100%;
   }
 }

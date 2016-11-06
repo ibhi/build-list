@@ -1,22 +1,21 @@
-<div class="card card-border-green">
-  <div class="title">Metrics</div>
-  <div class="arrow-container-left">
-    <div [ngClass] = "{ 'up-arrow-green' : data.test > 75, 'up-arrow-red': data.test < 75 }">
-      <div class="up"></div>
-      <div class="rect"></div>
-      <div id = "test" class="number">{{data.test}}</div>
+<div class="card" [ngClass] = "{'card-pending': data.state == 'pending', 'card-blue': data.state == 'running', 'card-red': data.state == 'rejected', 'card-green': data.state == 'accepted'}">
+  <div class="card-wrapper col-xs-12">
+    <div class="card-title">Metrics</div>
+    <div class="col-xs-6">
+      <div id = "test" [ngClass] = "{'up-arrow arrow-green': data.testScore > testGoal, 'down-arrow arrow-red': data.testScore < testGoal}">{{data.testScore}}</div>
+      <div class="text-center" [ngClass] = "{'mart30': data.test < testGoal}">Test</div>
     </div>
-    <div class="arrow-label">Test</div>
-  </div>
-
-  <div class="arrow-container-right">
-    <div [ngClass] = "{'up-arrow-green': data.maintainability > 50, 'up-arrow-red': data.maintainability < 50}">
-      <div class="up"></div>
-      <div class="rect"></div>
-      <div id = "maintainability" class="number">{{data.maintainability}}</div>
+    <div class="col-xs-6">
+      <div id = "maintainability" [ngClass] = "{'up-arrow arrow-green': data.maintainabilityScore > maintainabilityGoal, 'down-arrow arrow-red': data.maintainabilityScore < maintainabilityGoal}">{{data.maintainabilityScore}}</div>
+      <div class="text-center" [ngClass] = "{'mart30': data.maintainabilityScore < maintainabilityGoal}">Maintainability</div>
     </div>
-    <div class="arrow-label">Maintainability</div>
+    <div class="col-xs-6">
+      <div id = "security" class="right-arrow">{{data.securityScore}}</div>
+      <div class="text-center mart15">Security</div>
+    </div>
+    <div class="col-xs-6">
+      <div id = "workmanship" class="right-arrow">{{data.workmanshipScore}}</div>
+      <div class="text-center mart15">Workmanship</div>
+    </div>
   </div>
-  <p id = "security" >Security: {{data.security}}</p>
-  <p id = "workmanship">Workmanship: {{data.workmanship}}</p>
 </div>

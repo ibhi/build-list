@@ -1,6 +1,8 @@
 export interface IData {
-    test: number;
-    maintainability: number;
-    security: number;
-    workmanship: number;
+    state: string;
+    progress: number;
+    testScore: number;
+    maintainabilityScore: number;
+    securityScore: number;
+    workmanshipScore: number;
 }

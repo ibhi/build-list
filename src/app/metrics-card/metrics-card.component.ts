@@ -7,6 +7,10 @@ import { IData } from './IData';
 })
 export class MetricsCardComponent implements OnInit {
   @Input() data: IData;
+  /* tslint:disable:no-unused-variable */
+  private testGoal: number = 75;
+  private maintainabilityGoal = 50;
+  /* tslint:enable:no-unused-variable */
   constructor() { }
 
   ngOnInit() {

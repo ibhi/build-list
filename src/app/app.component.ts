@@ -34,10 +34,12 @@ export class AppComponent implements OnInit {
   };
 
   metricsData = {
-    test: 70,
-    maintainability: 49,
-    security: 64,
-    workmanship: 72
+    state: 'running',
+    progress: 75,
+    testScore: 80,
+    maintainabilityScore: 49,
+    securityScore: 64,
+    workmanshipScore: 72
   };
   private finalData;
 

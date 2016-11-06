@@ -13,10 +13,12 @@ describe('Component: MetricsCard', () => {
   let card: HTMLElement;
 
   let data: IData = {
-    test: 80,
-    maintainability: 49,
-    security: 64,
-    workmanship: 72
+    state: 'running',
+    progress: 75,
+    testScore: 80,
+    maintainabilityScore: 49,
+    securityScore: 64,
+    workmanshipScore: 72
   };
 
   beforeEach(async(() => {
@@ -43,34 +45,34 @@ describe('Component: MetricsCard', () => {
 
   it('should have correct test score', () => {
     let testScore = +card.querySelector('#test').textContent;
-    expect(testScore).toEqual(data.test);
+    expect(testScore).toEqual(data.testScore);
   });
 
   it('should have correct maintainability score', () => {
     let maintainabilityScore = +card.querySelector('#maintainability').textContent;
-    expect(maintainabilityScore).toEqual(data.maintainability);
+    expect(maintainabilityScore).toEqual(data.maintainabilityScore);
   });
 
   it('should have correct security score', () => {
-    let securityScore = card.querySelector('#security').textContent;
-    expect(securityScore).toEqual('Security: ' + data.security);
+    let securityScore = +card.querySelector('#security').textContent;
+    expect(securityScore).toEqual(data.securityScore);
   });
 
   it('should have correct workmanship score', () => {
-    let workmanshipScore = card.querySelector('#workmanship').textContent;
-    expect(workmanshipScore).toEqual('Workmanship: ' + data.workmanship);
+    let workmanshipScore = +card.querySelector('#workmanship').textContent;
+    expect(workmanshipScore).toEqual(data.workmanshipScore);
   });
 
-  it('test arrow: should have correct color based on goal', () => {
-    let container = card.querySelector('.arrow-container-left');
-    let arrow = container.querySelector('[ng-reflect-ng-class]');
-    expect(arrow.classList.contains('up-arrow-green')).toBeTruthy();
+  it('test arrow: should have correct color and arrow direction based on goal', () => {
+    let arrow = card.querySelector('#test');
+    expect(arrow.classList.contains('up-arrow')).toBeTruthy();
+    expect(arrow.classList.contains('arrow-green')).toBeTruthy();
   });
 
-  it('maintainability arrow: should have correct color based on goal', () => {
-    let container = card.querySelector('.arrow-container-right');
-    let arrow = container.querySelector('[ng-reflect-ng-class]');
-    expect(arrow.classList.contains('up-arrow-red')).toBeTruthy();
+  it('maintainability arrow: should have correct color and arrow direction based on goal', () => {
+    let arrow = card.querySelector('#maintainability');
+    expect(arrow.classList.contains('down-arrow')).toBeTruthy();
+    expect(arrow.classList.contains('arrow-red')).toBeTruthy();
   });
 
 });
