@@ -55,6 +55,13 @@ export class AppComponent implements OnInit {
     codeCovered: 76
   };
 
+  resultData = {
+    title: 'Change Accepted',
+    state: 'accepted',
+    status: 'Auto-Merged',
+    btnText: 'Merge Build'
+  };
+
   private finalData;
 
   constructor(private dataService: DataService) {
