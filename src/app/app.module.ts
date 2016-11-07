@@ -13,6 +13,7 @@ import { EpochDatePipe } from './epoch-date//epoch-date.pipe';
 import { ResultCardComponent } from './result-card/result-card.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionGroupComponent } from './accordion-group/accordion-group.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AccordionGroupComponent } from './accordion-group/accordion-group.compo
     EpochDatePipe,
     ResultCardComponent,
     AccordionComponent,
-    AccordionGroupComponent
+    AccordionGroupComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
