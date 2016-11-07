@@ -1,4 +1,4 @@
-<div class="card" [ngClass] = "{'card-pending': data.state == 'pending', 'card-blue': data.state == 'running', 'card-red': data.state == 'rejected', 'card-green': data.state == 'accepted'}">
+<div class="card" [ngClass] = "{'card-pending': data.state == 'pending', 'card-blue': data.state == 'running', 'card-red': data.state == 'rejected', 'card-green': data.state == 'accepted' || data.state == 'completed' }">
   <div class="card-wrapper col-xs-12">
     <div class="card-title">Metrics</div>
     <div class="col-xs-6">

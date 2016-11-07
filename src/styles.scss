@@ -94,6 +94,7 @@ $green: #72ac4d;
 $orange: #fed86e;
 $red: #be0712;
 $blue: #5e9cd3;
+$gray: #ccc;
 
 .mart15 {
   margin-top: 15px;
@@ -126,8 +127,16 @@ $blue: #5e9cd3;
 .card-wrapper {
   border: 2px solid $green;
   padding: 10px;
-  height: 220px;
+  height: 240px;
   overflow: auto;
+  -webkit-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  -moz-box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  box-shadow: 10px 10px 10px 0px rgba(196, 197, 196, 1);
+  transition: box-shadow 200ms ease;
+  &:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
 }
 
 .up-arrow {
@@ -241,6 +250,15 @@ $blue: #5e9cd3;
   }
 }
 
+.card-pending {
+  .card-title {
+    color: $gray;
+  }
+  .card-wrapper {
+    border-color: $gray;
+  }
+}
+
 .lap {
   color: $blue;
   i.fa {
@@ -333,6 +351,7 @@ $blue: #5e9cd3;
   text-align: center;
   width: 100%;
   padding: 10px;
+  padding-top: 20px;
 }
 
 .list-pending {
@@ -363,16 +382,17 @@ $blue: #5e9cd3;
   }
 }
 
-.acc-list-tem:first-child {
+.acc-list-item:first-child {
   text-align: left;
   width: 20%;
 }
 
 .acc-list {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
-.acc-list-tem {
+.acc-list-item {
   &:nth-child(3) {
     width: 20%;
   }
@@ -380,8 +400,16 @@ $blue: #5e9cd3;
   width: 10%;
 }
 
+.card-pending {
+  .pending-state {
+    font-size: 25px;
+    color: $gray;
+  }
+}
+
+
 @media all and (max-width: 992px) {
-  .acc-list-tem {
+  .acc-list-item {
     width: 25%;
     margin-bottom: 10px;
     &:first-child, &:nth-child(3) {

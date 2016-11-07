@@ -85,11 +85,11 @@ export class ProgressBarComponent implements OnInit, OnChanges, AfterViewInit {
 
   render() {
     // enter phase
-    this.svg.selectAll('rect.progress')
+    this.svg.selectAll('rect.progressWidth')
       .data(this.progressData)
       .enter()
       .append('rect')
-        .attr('class', 'progress')
+        .attr('class', 'progressWidth')
         .attr('x', (d) => this.xScale(d.x))
         .attr('y', (d) => d.y)
         .attr('height', this.options.height + 'px')
@@ -100,7 +100,7 @@ export class ProgressBarComponent implements OnInit, OnChanges, AfterViewInit {
         .ease(D3.easeLinear)
         .attr('width', (d) => this.xScale(d.value) + 'px');
     // update phase
-    this.svg.selectAll('rect.progress')
+    this.svg.selectAll('rect.progressWidth')
       .attr('width', function() {
         console.log(D3.select(this));
         return D3.select(this).attr('width');

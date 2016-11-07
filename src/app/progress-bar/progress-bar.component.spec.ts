@@ -55,7 +55,7 @@ describe('Component: ProgressBar', () => {
   });
 
   it('should show proper progress', () => {
-    let rect = div.nativeElement.querySelector('rect.progress').getBoundingClientRect();
+    let rect = div.nativeElement.querySelector('rect.progressWidth').getBoundingClientRect();
     // Wait for the animation to finish
     setTimeout(() => {
       expect(rect.width).toEqual(options.width * (data.progress / 100));
@@ -63,7 +63,7 @@ describe('Component: ProgressBar', () => {
   });
 
   it('should show proper color for the progress', () => {
-    let rect = div.nativeElement.querySelector('rect.progress');
+    let rect = div.nativeElement.querySelector('rect.progressWidth');
     expect(rect.getAttribute('fill')).toEqual(comp.stateColors[data.state]);
   });
 

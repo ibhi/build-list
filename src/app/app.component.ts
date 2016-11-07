@@ -8,73 +8,34 @@ import { DataService } from './data.service';
   providers: [DataService]
 })
 export class AppComponent implements OnInit {
-  title = 'app works!';
-  data = {progress: 30, state: 'running'};
-  options = {
-    width: 500,
+  private jobs;
+
+  /* tslint:disable:no-unused-variable */
+  private progressBarOptions = {
+    width: 50,
     height: 20,
     margin: {
-      left: 20,
-      right: 20,
-      top: 20,
-      bottom: 20
+      left: 5,
+      right: 5,
+      top: 5,
+      bottom: 5
     }
   };
-  pieData = [{
-    label: 'Failed No. of unit tests',
-    value: 400
-  }, {
-    label: 'Passed No. of unit tets',
-    value: 600
-  }];
 
-  pieOptions = {
-    height: 500,
-    width: 500
+  private stateClassMap = {
+    'Pending': 'list-pending',
+    'Running': 'list-running',
+    'Rejected': 'list-rejected',
+    'Completed': 'list-accepted',
+    'Accepted': 'list-accepted'
   };
+  /* tslint:enable:no-unused-variable */
 
-  metricsData = {
-    state: 'running',
-    progress: 75,
-    testScore: 80,
-    maintainabilityScore: 49,
-    securityScore: 64,
-    workmanshipScore: 72
-  };
-
-  buildData = {
-    state: 'rejected',
-    timestamp: 1460889960
-  };
-
-  unitTestData = {
-    state: 'accepted',
-    noOfTestsPassed: 142,
-    noOfTestsFailed: 10,
-    testsPassed: 73,
-    codeCovered: 76
-  };
-
-  resultData = {
-    title: 'Change Accepted',
-    state: 'accepted',
-    status: 'Auto-Merged',
-    btnText: 'Merge Build'
-  };
-
-  private finalData;
-
-  constructor(private dataService: DataService) {
-
-  }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.data = {progress: 80, state: 'running'};
-    }, 5000);
     this.dataService.getData().subscribe(data => {
-      this.finalData = data;
-      console.log(data);
+      this.jobs = data;
     });
   }
 }

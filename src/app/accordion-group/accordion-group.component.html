@@ -1,0 +1,9 @@
+<div class="acc-body" [ngClass] = "accClass">
+  <div class="acc-list" (click)="toggleOpen($event)">
+    <ng-content select = "[app-accordion-heading]"></ng-content>
+  </div>
+  
+  <div class="acc-cont collapse" [ngClass] = " { 'collapse': !isOpen }">
+    <ng-content></ng-content>
+  </div>
+</div>

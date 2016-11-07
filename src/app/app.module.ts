@@ -9,9 +9,10 @@ import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { MetricsCardComponent } from './metrics-card/metrics-card.component';
 import { BuildCardComponent } from './build-card/build-card.component';
 import { UnitTestCardComponent } from './unit-test-card/unit-test-card.component';
-import { FuncTestCardComponent } from './func-test-card/func-test-card.component';
 import { EpochDatePipe } from './epoch-date//epoch-date.pipe';
 import { ResultCardComponent } from './result-card/result-card.component';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AccordionGroupComponent } from './accordion-group/accordion-group.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { ResultCardComponent } from './result-card/result-card.component';
     MetricsCardComponent,
     BuildCardComponent,
     UnitTestCardComponent,
-    FuncTestCardComponent,
     EpochDatePipe,
-    ResultCardComponent
+    ResultCardComponent,
+    AccordionComponent,
+    AccordionGroupComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
