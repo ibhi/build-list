@@ -81,6 +81,7 @@ export class ProgressBarComponent implements OnInit, OnChanges, AfterViewInit {
       .attr('height', this.options.height + 'px')
       .attr('fill', '#d8d8d8')
       .attr('width', this.xScale(100) + 'px');
+    
   }
 
   render() {
@@ -99,10 +100,10 @@ export class ProgressBarComponent implements OnInit, OnChanges, AfterViewInit {
         .duration(1000)
         .ease(D3.easeLinear)
         .attr('width', (d) => this.xScale(d.value) + 'px');
+
     // update phase
     this.svg.selectAll('rect.progressWidth')
       .attr('width', function() {
-        console.log(D3.select(this));
         return D3.select(this).attr('width');
       })
       .transition()

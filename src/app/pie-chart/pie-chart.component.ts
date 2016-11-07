@@ -16,6 +16,7 @@ export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
   private host;
   private svg;
   private arc;
+  private toolTip;
   private chartWidth: number;
   private chartHeight: number;
   private chartColors;
@@ -76,6 +77,8 @@ export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
       .attr('height', this.options.height)
       .append('g')
         .attr('transform', 'translate(' + this.options.margin.left + ',' + this.options.margin.top + ')');
+    
+    this.toolTip = D3.select('body').append('div').attr('class', 'toolTip');
   }
 
   render() {
@@ -99,15 +102,16 @@ export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
       .attr('d', this.arc)
       .attr('id', (d, i) => 'arc-' + i)
       .attr('stroke', 'gray')
-      .attr('fill', (d, i) => this.chartColors(i));
-
-    // block.append('text')
-    //   .attr('class', 'pie-label')
-    //   .attr('dx', -10)
-    //   .attr('dy', 20)
-    //   .append('textPath')
-    //     .attr('xlink:href', (d, i) => '#arc-' + i)
-    //     .text((d) => d.data.value );
+      .attr('fill', (d, i) => this.chartColors(i))
+      .on('mousemove', d => {
+        this.toolTip.style('left', D3.event.pageX + 10 + 'px');
+        this.toolTip.style('top', D3.event.pageY - 25 + 'px');
+        this.toolTip.style('display', 'inline-block');
+        this.toolTip.html((d.data.label) + '<br>' + (d.data.value));
+      })
+      .on('mouseout', d => {
+        this.toolTip.style('display', 'none');
+      });
 
   }
 
