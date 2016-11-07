@@ -23,7 +23,7 @@ export class AccordionGroupComponent implements OnInit, OnDestroy {
   private _isOpen: boolean;
   private accordion: AccordionComponent;
 
-  public constructor(@Inject(AccordionComponent) accordion: AccordionComponent) {
+  constructor(@Inject(AccordionComponent) accordion: AccordionComponent) {
     this.accordion = accordion;
   }
 

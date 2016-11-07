@@ -38,10 +38,10 @@
           </div>
 
           <div *ngIf = "job.state !== 'Pending'">
-            <app-metrics-card [data] = "job.metrics"></app-metrics-card>
-            <app-build-card [data] = "job.build"></app-build-card>
-            <app-unit-test-card [data] = "job.unitTest"></app-unit-test-card>
-            <app-unit-test-card [data] = "job.functionalTest"></app-unit-test-card>
+            <app-metrics-card (click) = "myModal.open()" [data] = "job.metrics"></app-metrics-card>
+            <app-build-card (click) = "myModal.open()" [data] = "job.build"></app-build-card>
+            <app-unit-test-card (click) = "myModal.open()" [data] = "job.unitTest"></app-unit-test-card>
+            <app-unit-test-card (click) = "myModal.open()" [data] = "job.functionalTest"></app-unit-test-card>
             <app-result-card [data] = "job.result"></app-result-card>
           </div>
 
@@ -50,3 +50,14 @@
     </div>
   </div>
 </div>
+<modal #myModal>
+    <modal-header>
+        <h1>Detailed Job Status</h1>
+    </modal-header>
+    <modal-content>
+        Here you can find detailed information about each process
+    </modal-content>
+    <modal-footer>
+        <button class="btn btn-primary" (click)="myModal.close()">close</button>
+    </modal-footer>
+</modal>

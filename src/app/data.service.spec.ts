@@ -43,7 +43,7 @@ describe('Service: DataService', () => {
     inject([
       XHRBackend,
       DataService
-    ], (mockBackend: XHRBackend, dataService: DataService) => {
+    ], (mockBackend: MockBackend, dataService: DataService) => {
 
       const expectedUrl = './mock-data.json';
 

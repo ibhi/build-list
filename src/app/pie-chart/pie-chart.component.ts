@@ -1,5 +1,4 @@
 import { Component, OnInit, OnChanges, AfterViewInit,  Input, ElementRef, ViewChild, SimpleChange } from '@angular/core';
-import { IData } from './IData';
 import { IOptions } from './IOptions';
 import * as D3 from 'd3';
 
@@ -9,7 +8,7 @@ import * as D3 from 'd3';
   styleUrls: ['./pie-chart.component.scss']
 })
 export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
-  @Input() data: Array<IData>;
+  @Input() data;
   @Input() options: IOptions;
   @ViewChild('container') element: ElementRef;
   private htmlElement: HTMLElement;
@@ -77,14 +76,14 @@ export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
       .attr('height', this.options.height)
       .append('g')
         .attr('transform', 'translate(' + this.options.margin.left + ',' + this.options.margin.top + ')');
-    
+
     this.toolTip = D3.select('body').append('div').attr('class', 'toolTip');
   }
 
   render() {
     let arcs = D3.pie()
       .sort(null)
-      .value(d => d.value)(this.data);
+      .value((d: any) => d.value)(this.data);
 
     let pieG = this.svg.selectAll('g')
             .data([this.data])

@@ -81,7 +81,7 @@ export class ProgressBarComponent implements OnInit, OnChanges, AfterViewInit {
       .attr('height', this.options.height + 'px')
       .attr('fill', '#d8d8d8')
       .attr('width', this.xScale(100) + 'px');
-    
+
   }
 
   render() {

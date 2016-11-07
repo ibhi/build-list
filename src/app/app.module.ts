@@ -15,6 +15,8 @@ import { AccordionComponent } from './accordion/accordion.component';
 import { AccordionGroupComponent } from './accordion-group/accordion-group.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import {ModalModule} from 'ng2-modal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    ModalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

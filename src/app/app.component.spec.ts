@@ -21,6 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { DataService } from './data.service';
 import { mockData } from './mock-data-test';
 
+import {ModalModule} from 'ng2-modal';
+
 describe('Component: AppComponent', () => {
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
@@ -34,13 +36,13 @@ describe('Component: AppComponent', () => {
     let mockHttp = {
       get:  null
     } as Http;
-  
+
     spyOn(mockHttp, 'get').and.returnValue(Observable.of({
       json: () => mockJobs
     }));
 
     TestBed.configureTestingModule({
-      imports: [HttpModule],
+      imports: [HttpModule, ModalModule],
       declarations: [
         AppComponent,
         ProgressBarComponent,
