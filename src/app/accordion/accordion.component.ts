@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { AccordionGroupComponent } from '.././accordion-group/accordion-group.component';
 
 @Component({
@@ -8,11 +8,6 @@ import { AccordionGroupComponent } from '.././accordion-group/accordion-group.co
 })
 export class AccordionComponent {
   @Input() public closeOthers: boolean;
-
-  /* tslint:disable:no-unused-variable */
-  @HostBinding('class.panel-group')
-  public addClass: boolean = true;
-  /* tslint:enable:no-unused-variable */
 
   private groups: Array<AccordionGroupComponent> = [];
 
