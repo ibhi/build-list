@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IData } from './IData'
+import { IData } from './IData';
+
 @Component({
   selector: 'app-build-card',
   templateUrl: './build-card.component.html',

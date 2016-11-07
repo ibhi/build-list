@@ -101,13 +101,13 @@ export class PieChartComponent implements OnInit, AfterViewInit, OnChanges {
       .attr('stroke', 'gray')
       .attr('fill', (d, i) => this.chartColors(i));
 
-    block.append('text')
-      .attr('class', 'pie-label')
-      .attr('x', 200)
-      .attr('dy', 20)
-      .append('textPath')
-        .attr('xlink:href', (d, i) => '#arc-' + i)
-        .text((d) => d.data.value );
+    // block.append('text')
+    //   .attr('class', 'pie-label')
+    //   .attr('dx', -10)
+    //   .attr('dy', 20)
+    //   .append('textPath')
+    //     .attr('xlink:href', (d, i) => '#arc-' + i)
+    //     .text((d) => d.data.value );
 
   }
 

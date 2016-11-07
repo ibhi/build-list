@@ -1,3 +1,16 @@
-<p>
-  unit-test-card works!
-</p>
+<div class="card card-graph" [ngClass] = "{'card-pending': data.state == 'pending', 'card-blue': data.state == 'running', 'card-red': data.state == 'rejected', 'card-green': data.state == 'accepted'}">
+  <div class="card-wrapper col-xs-12">
+    <div class="card-title">Unit Test</div>
+    <div class="col-xs-7 graph">
+      <app-pie-chart [data] = "chartData" [options] = "chartOptions"></app-pie-chart>
+    </div>
+    <div class="col-xs-5 graph-percent text-center">{{data.testsPassed}}%<span>test Passed</span></div>
+    <div class="code-cov text-center">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" [ngStyle] = "{'width.%': data.codeCovered}">
+          {{data.codeCovered}}% <span>code covered</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

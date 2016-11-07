@@ -47,6 +47,14 @@ export class AppComponent implements OnInit {
     timestamp: 1460889960
   };
 
+  unitTestData = {
+    state: 'accepted',
+    noOfTestsPassed: 142,
+    noOfTestsFailed: 10,
+    testsPassed: 73,
+    codeCovered: 76
+  };
+
   private finalData;
 
   constructor(private dataService: DataService) {
@@ -60,6 +68,6 @@ export class AppComponent implements OnInit {
     this.dataService.getData().subscribe(data => {
       this.finalData = data;
       console.log(data);
-    })
+    });
   }
 }

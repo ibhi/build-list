@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DataService {
-  private url:string = './mock-data.json';
+  private url: string = './mock-data.json';
   constructor(private http: Http) { }
 
   getData() {

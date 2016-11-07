@@ -14,7 +14,7 @@ describe('Component: BuildCard', () => {
   let de: DebugElement;
   let card: HTMLElement;
 
-  let mockData:IData = {
+  let mockData: IData = {
     state: 'rejected',
     timestamp: 1460889960
   };
