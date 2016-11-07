@@ -8,7 +8,7 @@ import { DataService } from './data.service';
   providers: [DataService]
 })
 export class AppComponent implements OnInit {
-  private jobs;
+  jobs;
 
   /* tslint:disable:no-unused-variable */
   private progressBarOptions = {

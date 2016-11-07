@@ -3,9 +3,9 @@ let data = [
     {
         'type': 'build',
         'name': 'Tenrox-R1_1235',
-        'owner': '',
+        'owner': 'samy',
         'state': 'Pending',
-        'timestamp': '',
+        'timestamp': '1460986020',
         'metrics': {
             'state': 'pending',
             'progress': 0,
@@ -16,10 +16,12 @@ let data = [
         },
         'build': {
             'state': 'pending',
+            'progress': 0,
             'timestamp': ''
         },
         'unitTest' : {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -27,6 +29,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -54,10 +57,12 @@ let data = [
         },
         'build': {
             'state': 'pending',
+            'progress': 0,
             'timestamp': ''
         },
         'unitTest' : {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -65,6 +70,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -92,10 +98,12 @@ let data = [
         },
         'build': {
             'state': 'completed',
+            'progress': 100,
             'timestamp': '1460889960'
         },
         'unitTest' : {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 142,
             'noOfTestsFailed': 10,
             'testsPassed': '73',
@@ -103,6 +111,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 4321,
             'noOfTestsFailed': 2145,
             'testsPassed': '68',
@@ -118,7 +127,7 @@ let data = [
     {
         'type': 'build',
         'name': 'Tenrox-R1_1234',
-        'owner': '',
+        'owner': 'jtuck',
         'state': 'Completed',
         'timestamp': '1460886120',
         'metrics': {
@@ -131,10 +140,12 @@ let data = [
         },
         'build': {
             'state': 'completed',
+            'progress': 100,
             'timestamp': '1460889960'
         },
         'unitTest' : {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 142,
             'noOfTestsFailed': 10,
             'testsPassed': '73',
@@ -142,6 +153,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 4321,
             'noOfTestsFailed': 2145,
             'testsPassed': '68',
@@ -170,10 +182,12 @@ let data = [
         },
         'build': {
             'state': 'pending',
+            'progress': 0,
             'timestamp': ''
         },
         'unitTest' : {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -181,6 +195,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'pending',
+            'progress': 0,
             'noOfTestsPassed': null,
             'noOfTestsFailed': null,
             'testsPassed': '',
@@ -208,10 +223,12 @@ let data = [
         },
         'build': {
             'state': 'completed',
+            'progress': 100,
             'timestamp': '1460788980'
         },
         'unitTest' : {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 142,
             'noOfTestsFailed': 10,
             'testsPassed': '73',
@@ -219,6 +236,7 @@ let data = [
         },
         'functionalTest': {
             'state': 'completed',
+            'progress': 100,
             'noOfTestsPassed': 4321,
             'noOfTestsFailed': 2145,
             'testsPassed': '68',
